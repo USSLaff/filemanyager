@@ -41,5 +41,45 @@ namespace file_manager.Methods
 			}
 			return inputLicense;
 		}
+		public static Car inputData()
+		{
+			Car tempCar = new Car();
+			Console.WriteLine("Creating new Car...");
+
+			/*
+            private string licensePlate;
+            private string brand;
+            private string name;
+            private string color;
+            private double price;
+            private int horsePower;
+            private double[] consumption = new double[3];
+            private bool isEconomy;
+            */
+
+			Console.Write("Input the car's license plate: ");
+			tempCar.LicensePlate = Inputs.getValidLicensePlate();
+
+			Console.Write("Input the car's brand: ");
+			tempCar.Brand = Console.ReadLine();
+
+			Console.Write("Input the car's name: ");
+			tempCar.Name = Console.ReadLine();
+
+			Console.Write("Input the car's color: ");
+			tempCar.Color = Console.ReadLine();
+
+			Console.Write("Input the car's price: ");
+			tempCar.Price = Inputs.getValidDouble();
+
+			Console.Write("Input the car's horsepower: ");
+			tempCar.Price = Inputs.getValidInt();
+
+			Console.Write("Inpupt the car's consumption (city, mixed, highway): ");
+			tempCar.SetConsumption(Inputs.getValidDouble(), Inputs.getValidDouble(), Inputs.getValidDouble());
+
+			return tempCar;
+		}
+
 	}
 }
