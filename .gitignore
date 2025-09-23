@@ -134,3 +134,8 @@ $RECYCLE.BIN/
 _NCrunch*
 /.vs/file_manager/CopilotIndices
 /bin/Debug
+.vs/file_manager.csproj.dtbcache.json
+.vs/file_manager/v17/DocumentLayout.backup.json
+/.vs
+/.vs
+.vs/file_manager/v17/DocumentLayout.json

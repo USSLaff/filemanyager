@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace file_manager.Methods
 {
-    public class UserInterfaces
+    internal class UserInterfaces
     {
         public static void menu()
         {
@@ -50,6 +50,7 @@ namespace file_manager.Methods
 
             }
             while (true);
+
 
         }
     }

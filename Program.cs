@@ -55,24 +55,7 @@ namespace file_manager
 				Console.WriteLine("Show status bar: " + showStatusBar);
 			}
 		}
-		public static void menu()
-		{
-			do
-			{
-				Console.WriteLine($"Menu:\nDisplay data:\t1\nInput data:\t2\nSearch by license plate:\t3\nDelete record:\t4\nSort records:\t5\n");
-
-
-
-
-
-
-
-
-			}
-			while (true);
-
-
-		}
+		
 
 		public static Car inputData()
 		{
@@ -125,12 +108,14 @@ namespace file_manager
 		}
 		static void Main(string[] args)
 		{
-			WriteToFile();
+			//WriteToFile();
 			DisplayValues();
 			//Car testCar = new Car("IAP-512","Ford","Focus Mk1",75,"Gray",879000,7.6,6.3,5.5);
-			Car testCar = inputData();
-			Console.WriteLine(testCar);
-			Console.ReadKey();
+			//Car testCar = inputData();
+			
+			//Console.WriteLine(testCar);
+            UserInterfaces.menu();
+            Console.ReadKey();
 
 		}
 	}
