@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace file_manager.Classes
 {
-    internal class Car
+    public class Car
     {
         private string licensePlate;
         private string brand;
