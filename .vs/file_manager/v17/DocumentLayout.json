@@ -1,9 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Laff\\Desktop\\cshart2.0\\file_manager\\filemanyager\\",
+  "WorkspaceRootPath": "C:\\Users\\L480\\Desktop\\EgyetemxD\\AdatB1Gyak\\filemanyager\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AB274166-8072-4E35-95AC-1D55E1CBE82A}|file_manager.csproj|c:\\users\\laff\\desktop\\cshart2.0\\file_manager\\filemanyager\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AB274166-8072-4E35-95AC-1D55E1CBE82A}|file_manager.csproj|c:\\users\\l480\\desktop\\egyetemxd\\adatb1gyak\\filemanyager\\methods\\userinterfaces.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB274166-8072-4E35-95AC-1D55E1CBE82A}|file_manager.csproj|solutionrelative:methods\\userinterfaces.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB274166-8072-4E35-95AC-1D55E1CBE82A}|file_manager.csproj|c:\\users\\l480\\desktop\\egyetemxd\\adatb1gyak\\filemanyager\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AB274166-8072-4E35-95AC-1D55E1CBE82A}|file_manager.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -17,20 +21,29 @@
           "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\L480\\Desktop\\EgyetemxD\\AdatB1Gyak\\filemanyager\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\L480\\Desktop\\EgyetemxD\\AdatB1Gyak\\filemanyager\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAwwHMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T10:13:53.022Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Laff\\Desktop\\cshart2.0\\file_manager\\filemanyager\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Laff\\Desktop\\cshart2.0\\file_manager\\filemanyager\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAGAAAAAAAAAAAADwv3AAAAAAAAAAAAAAAA==",
+              "Title": "UserInterfaces.cs",
+              "DocumentMoniker": "C:\\Users\\L480\\Desktop\\EgyetemxD\\AdatB1Gyak\\filemanyager\\Methods\\UserInterfaces.cs",
+              "RelativeDocumentMoniker": "Methods\\UserInterfaces.cs",
+              "ToolTip": "C:\\Users\\L480\\Desktop\\EgyetemxD\\AdatB1Gyak\\filemanyager\\Methods\\UserInterfaces.cs",
+              "RelativeToolTip": "Methods\\UserInterfaces.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwDYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-23T09:52:48.693Z",
+              "WhenOpened": "2025-09-23T10:12:26.138Z",
               "EditorCaption": ""
             }
           ]
