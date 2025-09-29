@@ -40,6 +40,7 @@ namespace file_manager.Methods
                         break;
                     case "4":
                         //delete 
+                        //ide tedd olivért a metódusod nevéd az ez alatt lévő sor csak lementi a lsitát a fájlba :3
                         CarFileManager.SaveDataToFile(fileName, cars);
                         break;
                     case "5":
