@@ -23,6 +23,11 @@ namespace file_manager.Methods
                     case "1":
                         Console.Write("Enter a valid license plate: ");
                         string plate = Console.ReadLine();
+                        if (!Car.IsValidLicensePlate(plate))
+                        {
+                            Console.WriteLine("Incorrect license plate!");
+                            break;
+                        }
                         var carPlate = cars.FirstOrDefault(c => c.LicensePlate == plate);
                         if (Car.IsValidLicensePlate(plate) && Inputs.LicensePlateExists(cars, plate))
                         {
