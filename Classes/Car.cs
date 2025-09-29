@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace file_manager.Classes
 {
+    [Serializable]
     public class Car
     {
         private string licensePlate;

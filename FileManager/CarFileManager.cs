@@ -6,12 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using file_manager.Classes;
+using System.Runtime.Serialization.Formatters.Binary;
 
-namespace file_manager.Methods
+namespace file_manager.FileManager
 {
     public class CarFileManager
     {
-        public List<Car> ReadCarsFromBinaryFile(string filePath)
+        public static List<Car> ReadCarsFromBinaryFile(string filePath)
         {
             List<Car> cars = new List<Car>();
 
@@ -59,6 +60,22 @@ namespace file_manager.Methods
             }
 
             return cars;
+        }
+        public static void SaveDataToFile(string fileName, List<Car> cars)
+        {
+            try
+            {
+                BinaryFormatter formatter = new BinaryFormatter();
+                using (FileStream stream = new FileStream(fileName, FileMode.Create))
+                {
+                    formatter.Serialize(stream, cars);
+                }
+                Console.WriteLine("Cars saved successfully!");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error saving to file: {ex.Message}");
+            }
         }
     }
 }

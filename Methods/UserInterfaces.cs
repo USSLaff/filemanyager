@@ -1,4 +1,6 @@
-﻿using System;
+﻿using file_manager.Classes;
+using file_manager.FileManager;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,10 +10,11 @@ namespace file_manager.Methods
 {
     internal class UserInterfaces
     {
-        public static void menu()
+        public static void menu(string fileName,List<Car> cars)
         {
             do
             {
+
                 Console.Clear();
                 string option;
                 Console.WriteLine($"Menu:\nDisplay data:\t1\nInput data:\t2\nSearch:\t\t3\nDelete record:\t4\nSort records:\t5\nExit:\t\t0");
@@ -24,9 +27,11 @@ namespace file_manager.Methods
                         break;
                     case "2":
                         // inputdata 
+                       
                         break;
                     case "3":
                         // search bazsi
+                        SearchOptions.SearchOptionsMenu();
                         break;
                     case "4":
                         //delete 

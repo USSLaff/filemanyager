@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using file_manager.Classes;
 
 namespace file_manager.Methods
 {
     internal class SearchOptions
     {
-        public static void SearchOptions()
+        public static void SearchOptionsMenu()
         {
             Car car = new Car("IAP-512", "Ford", "Focus Mk1", 500, "Gray", 879000, 7.6, 6.3, 5.5);
             do
