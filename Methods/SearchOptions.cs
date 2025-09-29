@@ -9,13 +9,13 @@ namespace file_manager.Methods
 {
     internal class SearchOptions
     {
-        public static void SearchOptionsMenu()
+        public static void SearchOptionsMenu(string fileName, List<Car> cars)
         {
-            Car car = new Car("IAP-512", "Ford", "Focus Mk1", 500, "Gray", 879000, 7.6, 6.3, 5.5);
             do
             {
-                Console.WriteLine($"\nSearch options:\nLicense plate:\t1\nBrand:\t\t2\nName:\t\t3\nExit:\t\t0");
-                Console.Write("Enter your number: ");
+                Console.Clear();
+                Console.WriteLine($"Search options:\nLicense plate:\t1\nBrand:\t\t2\nName:\t\t3\nColor:\t\t4\nHorsepower:\t5\nPrice:\t\t6\nExit:\t\t0");
+                Console.Write("\nEnter your number: ");
                 string opt;
                 opt = Console.ReadLine();
                 switch (opt)
@@ -23,59 +23,86 @@ namespace file_manager.Methods
                     case "1":
                         Console.Write("Enter a valid license plate: ");
                         string plate = Console.ReadLine();
-                        if (car.LicensePlate.Contains(plate))
+                        var carPlate = cars.FirstOrDefault(c => c.LicensePlate == plate);
+                        if (Car.IsValidLicensePlate(plate) && Inputs.LicensePlateExists(cars, plate))
                         {
-                            Console.WriteLine($"\nLicense plate: {car.LicensePlate}\n" +
-                                $"Brand: {car.Brand}\n" + $"Name: {car.Name}\n" +
-                                $"Horsepower: {car.HorsePower}\n" + $"Color: {car.Color}\n" +
-                                $"Price: {car.Price}" + $"\nConsumption: \n\tCity: {car.Consumption[0]} L/100Km\n\t" +
-                                $"Mixed: {car.Consumption[1]} L/100Km\n\t" +
-                                $"Highway: {car.Consumption[2]} L/100Km\n" +
-                                $"Economy: {(car.IsEconomy ? "Cheap" : "Expensive")}");
+                            Console.WriteLine(carPlate);
                         }
                         else
                         {
-                            Console.WriteLine("Error!");
+                            Console.WriteLine("There is no such license plate!");
                         }
                         break;
                     case "2":
                         Console.Write("Enter a brand: ");
                         string brand = Console.ReadLine();
-                        if (brand == car.Brand)
+                        var carBrand = cars.Where(c => c.Brand == brand).ToList();
+                        if (carBrand != null)
                         {
-                            Console.WriteLine($"\nLicense plate: {car.LicensePlate}\n" +
-                                $"Brand: {car.Brand}\n" + $"Name: {car.Name}\n" +
-                                $"Horsepower: {car.HorsePower}\n" + $"Color: {car.Color}\n" +
-                                $"Price: {car.Price}" + $"\nConsumption: \n\tCity: {car.Consumption[0]} L/100Km\n\t" +
-                                $"Mixed: {car.Consumption[1]} L/100Km\n\t" +
-                                $"Highway: {car.Consumption[2]} L/100Km\n" +
-                                $"Economy: {(car.IsEconomy ? "Cheap" : "Expensive")}");
+                            Console.WriteLine(carBrand);
                         }
                         else
                         {
-                            Console.WriteLine("Error!");
+                            Console.WriteLine("There is no car of this brand!");
                         }
                         break;
                     case "3":
                         Console.Write("Enter a car name: ");
                         string name = Console.ReadLine();
-                        if (name == car.Name)
+                        var carName = cars.Where(c => c.Name == name).ToList();
+                        if (carName != null)
                         {
-                            Console.WriteLine($"\nLicense plate: {car.LicensePlate}\n" +
-                                $"Brand: {car.Brand}\n" + $"Name: {car.Name}\n" +
-                                $"Horsepower: {car.HorsePower}\n" + $"Color: {car.Color}\n" +
-                                $"Price: {car.Price}" + $"\nConsumption: \n\tCity: {car.Consumption[0]} L/100Km\n\t" +
-                                $"Mixed: {car.Consumption[1]} L/100Km\n\t" +
-                                $"Highway: {car.Consumption[2]} L/100Km\n" +
-                                $"Economy: {(car.IsEconomy ? "Cheap" : "Expensive")}");
+                            Console.WriteLine(carName);
                         }
                         else
                         {
-                            Console.WriteLine("Error!");
+                            Console.WriteLine("There is no car with that name!");
+                        }
+                        break;
+                    case "4":
+                        Console.Write("Enter a color: ");
+                        string color = Console.ReadLine();
+                        var carColor = cars.Where(c => c.Color == color).ToList();
+                        if (carColor != null)
+                        {
+                            Console.WriteLine(carColor);
+                        }
+                        else
+                        {
+                            Console.WriteLine("There is no car of this color!");
+                        }
+                        break;
+                    case "5":
+                        Console.Write("Enter a horsepower: ");
+                        int hp = int.Parse(Console.ReadLine());
+                        var carHp = cars.Where(c => c.HorsePower == hp).ToList();
+                        if (carHp != null)
+                        {
+                            Console.WriteLine(carHp);
+                        }
+                        else
+                        {
+                            Console.WriteLine("There is no car with this much horsepower!");
+                        }
+                        break;
+                    case "6":
+                        Console.WriteLine("Enter a price: ");
+                        double price = double.Parse(Console.ReadLine());
+                        var carPrice = cars.Where(c => c.Price == price).ToList();
+                        if (carPrice != null)
+                        {
+                            Console.WriteLine(carPrice);
+                        }
+                        else
+                        {
+                            Console.WriteLine("There is no car with this price!");
                         }
                         break;
                     case "0":
                         return;
+                    default:
+                        Console.WriteLine("Invalid option. Please try again.");
+                        break;
 
                 }
 

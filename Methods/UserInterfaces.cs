@@ -36,7 +36,7 @@ namespace file_manager.Methods
                         break;
                     case "3":
                         // search bazsi
-                        SearchOptions.SearchOptionsMenu();
+                        SearchOptions.SearchOptionsMenu(fileName, cars);
                         break;
                     case "4":
                         //delete 
