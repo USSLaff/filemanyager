@@ -1,14 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\L480\\Desktop\\EgyetemxD\\AdatB1Gyak\\filemanyager\\",
+  "WorkspaceRootPath": "C:\\Users\\szova\\Documents\\GitHub\\filemanyager\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AB274166-8072-4E35-95AC-1D55E1CBE82A}|file_manager.csproj|c:\\users\\l480\\desktop\\egyetemxd\\adatb1gyak\\filemanyager\\methods\\userinterfaces.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AB274166-8072-4E35-95AC-1D55E1CBE82A}|file_manager.csproj|c:\\users\\szova\\documents\\github\\filemanyager\\methods\\delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB274166-8072-4E35-95AC-1D55E1CBE82A}|file_manager.csproj|solutionrelative:methods\\delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB274166-8072-4E35-95AC-1D55E1CBE82A}|file_manager.csproj|c:\\users\\szova\\documents\\github\\filemanyager\\methods\\inputs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB274166-8072-4E35-95AC-1D55E1CBE82A}|file_manager.csproj|solutionrelative:methods\\inputs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB274166-8072-4E35-95AC-1D55E1CBE82A}|file_manager.csproj|c:\\users\\szova\\documents\\github\\filemanyager\\methods\\userinterfaces.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AB274166-8072-4E35-95AC-1D55E1CBE82A}|file_manager.csproj|solutionrelative:methods\\userinterfaces.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AB274166-8072-4E35-95AC-1D55E1CBE82A}|file_manager.csproj|c:\\users\\l480\\desktop\\egyetemxd\\adatb1gyak\\filemanyager\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AB274166-8072-4E35-95AC-1D55E1CBE82A}|file_manager.csproj|c:\\users\\szova\\documents\\github\\filemanyager\\filemanager\\carfilemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB274166-8072-4E35-95AC-1D55E1CBE82A}|file_manager.csproj|solutionrelative:filemanager\\carfilemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB274166-8072-4E35-95AC-1D55E1CBE82A}|file_manager.csproj|c:\\users\\szova\\documents\\github\\filemanyager\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AB274166-8072-4E35-95AC-1D55E1CBE82A}|file_manager.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB274166-8072-4E35-95AC-1D55E1CBE82A}|file_manager.csproj|c:\\users\\szova\\documents\\github\\filemanyager\\methods\\searchoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB274166-8072-4E35-95AC-1D55E1CBE82A}|file_manager.csproj|solutionrelative:methods\\searchoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB274166-8072-4E35-95AC-1D55E1CBE82A}|file_manager.csproj|c:\\users\\szova\\documents\\github\\filemanyager\\classes\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB274166-8072-4E35-95AC-1D55E1CBE82A}|file_manager.csproj|solutionrelative:classes\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +38,97 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\L480\\Desktop\\EgyetemxD\\AdatB1Gyak\\filemanyager\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\L480\\Desktop\\EgyetemxD\\AdatB1Gyak\\filemanyager\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAFkAAAAAAAAAAAAwwHMAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "SearchOptions.cs",
+              "DocumentMoniker": "C:\\Users\\szova\\Documents\\GitHub\\filemanyager\\Methods\\SearchOptions.cs",
+              "RelativeDocumentMoniker": "Methods\\SearchOptions.cs",
+              "ToolTip": "C:\\Users\\szova\\Documents\\GitHub\\filemanyager\\Methods\\SearchOptions.cs",
+              "RelativeToolTip": "Methods\\SearchOptions.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAAwAsAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-23T10:13:53.022Z",
+              "WhenOpened": "2025-09-29T17:35:14.158Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Inputs.cs",
+              "DocumentMoniker": "C:\\Users\\szova\\Documents\\GitHub\\filemanyager\\Methods\\Inputs.cs",
+              "RelativeDocumentMoniker": "Methods\\Inputs.cs",
+              "ToolTip": "C:\\Users\\szova\\Documents\\GitHub\\filemanyager\\Methods\\Inputs.cs",
+              "RelativeToolTip": "Methods\\Inputs.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAswF4AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T17:32:04.388Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Car.cs",
+              "DocumentMoniker": "C:\\Users\\szova\\Documents\\GitHub\\filemanyager\\Classes\\Car.cs",
+              "RelativeDocumentMoniker": "Classes\\Car.cs",
+              "ToolTip": "C:\\Users\\szova\\Documents\\GitHub\\filemanyager\\Classes\\Car.cs",
+              "RelativeToolTip": "Classes\\Car.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAowGQAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T17:31:33.053Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserInterfaces.cs",
+              "DocumentMoniker": "C:\\Users\\szova\\Documents\\GitHub\\filemanyager\\Methods\\UserInterfaces.cs",
+              "RelativeDocumentMoniker": "Methods\\UserInterfaces.cs",
+              "ToolTip": "C:\\Users\\szova\\Documents\\GitHub\\filemanyager\\Methods\\UserInterfaces.cs",
+              "RelativeToolTip": "Methods\\UserInterfaces.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAjwCEAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T17:29:13.374Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\szova\\Documents\\GitHub\\filemanyager\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\szova\\Documents\\GitHub\\filemanyager\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T17:21:50.088Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UserInterfaces.cs",
-              "DocumentMoniker": "C:\\Users\\L480\\Desktop\\EgyetemxD\\AdatB1Gyak\\filemanyager\\Methods\\UserInterfaces.cs",
-              "RelativeDocumentMoniker": "Methods\\UserInterfaces.cs",
-              "ToolTip": "C:\\Users\\L480\\Desktop\\EgyetemxD\\AdatB1Gyak\\filemanyager\\Methods\\UserInterfaces.cs",
-              "RelativeToolTip": "Methods\\UserInterfaces.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAgwDYAAAAJAAAAAAAAAA==",
+              "Title": "Delete.cs",
+              "DocumentMoniker": "C:\\Users\\szova\\Documents\\GitHub\\filemanyager\\Methods\\Delete.cs",
+              "RelativeDocumentMoniker": "Methods\\Delete.cs",
+              "ToolTip": "C:\\Users\\szova\\Documents\\GitHub\\filemanyager\\Methods\\Delete.cs",
+              "RelativeToolTip": "Methods\\Delete.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAjwCoAAABjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-23T10:12:26.138Z",
+              "WhenOpened": "2025-09-29T17:19:00.888Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CarFileManager.cs",
+              "DocumentMoniker": "C:\\Users\\szova\\Documents\\GitHub\\filemanyager\\FileManager\\CarFileManager.cs",
+              "RelativeDocumentMoniker": "FileManager\\CarFileManager.cs",
+              "ToolTip": "C:\\Users\\szova\\Documents\\GitHub\\filemanyager\\FileManager\\CarFileManager.cs",
+              "RelativeToolTip": "FileManager\\CarFileManager.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAswDAAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T17:14:54.229Z",
               "EditorCaption": ""
             }
           ]

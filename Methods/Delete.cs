@@ -11,47 +11,52 @@ namespace file_manager.Methods
 {
     public class Delete
     {
-        public static void DeleteByLicensePlate(string licensePlate, string fileName)
+        public static void DeleteByLicensePlate(List<Car> cars)
         {
-            List<Car> cars = new List<Car>();
-
-            using (var stream = File.Open(fileName, FileMode.Open))
+            Console.Write("Enter a valid license plate: ");
+            string licensePlate = Console.ReadLine();
+            var carPlate = cars.FirstOrDefault(c => c.LicensePlate == licensePlate);
+            if (Car.IsValidLicensePlate(licensePlate) && Inputs.LicensePlateExists(cars, licensePlate))
             {
-                var formatter = new BinaryFormatter();
-                try
+                Console.WriteLine(carPlate);
+            }
+            else
+            {
+                Console.WriteLine("There is no such license plate!");
+            }
+
+            try
+            {
+                if (string.IsNullOrWhiteSpace(licensePlate))
                 {
-                    cars = (List<Car>)formatter.Deserialize(stream);
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("Hiba történt a fájl deszerializálása közben: " + ex.Message);
+                    Console.WriteLine("Incorrect license plate number");
                     return;
                 }
 
-                Car asd = cars.FirstOrDefault(x => x.LicensePlate == licensePlate);
-                if (asd.LicensePlate == licensePlate)
+                if (cars == null || cars.Count == 0)
                 {
-
-                    cars.RemoveAll(car => car.LicensePlate == licensePlate);
+                    Console.WriteLine("The car list is empty");
+                    return;
                 }
 
-                
-            }
+                // Törlés
+                int removedCount = cars.RemoveAll(car => car.LicensePlate == licensePlate.ToUpper());
 
-            using (var stream = new FileStream(fileName, FileMode.Create))
+                if (removedCount > 0)
+                {
+                    Console.WriteLine($" {licensePlate} has been deleted");
+                }
+                else
+                {
+                    Console.WriteLine($"No car found with license plate {licensePlate}");
+                }
+            }
+            catch (Exception ex)
             {
-                var formatter = new BinaryFormatter();
-                try
-                {
-                    formatter.Serialize(stream, cars);
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("Hiba történt a fájl szérializálása közben: " + ex.Message);
-                }
+                Console.WriteLine($"An error occurred during deletion: {ex.Message}");
             }
-
-            Console.WriteLine($"A(z) {licensePlate} rendszámú autó törlésre került.");
+            Console.WriteLine("Cars saved sucessfully!\nPress ENTER to continue...");
+            Console.ReadKey();
         }
     }
 }
