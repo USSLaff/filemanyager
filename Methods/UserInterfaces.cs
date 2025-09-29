@@ -5,16 +5,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using file_manager.Methods;
 
 namespace file_manager.Methods
 {
+
     internal class UserInterfaces
     {
-        public static void menu(string fileName,List<Car> cars)
+
+        public static void menu(string fileName)
         {
+            List<Car> cars = new List<Car>();
+            cars = CarFileManager.ReadCarsFromBinaryFile(fileName);
             do
             {
-
+               
                 Console.Clear();
                 string option;
                 Console.WriteLine($"Menu:\nDisplay data:\t1\nInput data:\t2\nSearch:\t\t3\nDelete record:\t4\nSort records:\t5\nExit:\t\t0");
@@ -23,11 +28,11 @@ namespace file_manager.Methods
                 switch (option)
                 {
                     case "1":
-                        // displaydata adam
+                        Display.DisplayData(cars);
                         break;
                     case "2":
-                        // inputdata 
-                       
+                        Inputs.InputCarToList(cars);
+                        CarFileManager.SaveDataToFile(fileName, cars);
                         break;
                     case "3":
                         // search bazsi
@@ -35,12 +40,21 @@ namespace file_manager.Methods
                         break;
                     case "4":
                         //delete 
+                        CarFileManager.SaveDataToFile(fileName, cars);
                         break;
                     case "5":
-                        //sort adam
+                        //sort
+                        DataSort.SortMenu(fileName, cars);
                         break;
                     case "0":
+                        CarFileManager.SaveDataToFile(fileName, cars);
+                        Console.WriteLine("Cars saved sucessfully!\nPress ENTER to Exit!");
+                        Console.ReadKey();
                         Console.WriteLine("Bye!");
+                        Console.ReadKey();
+                    
+                        
+
                         return;
                     default:
                         Console.WriteLine("It's not an option!\nPress a button to continue....");
@@ -51,11 +65,9 @@ namespace file_manager.Methods
 
 
 
-
-
             }
             while (true);
-
+            
 
         }
     }

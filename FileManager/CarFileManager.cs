@@ -3,10 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
-using file_manager.Classes;
-using System.Runtime.Serialization.Formatters.Binary;
 
 namespace file_manager.FileManager
 {
@@ -14,53 +13,39 @@ namespace file_manager.FileManager
     {
         public static List<Car> ReadCarsFromBinaryFile(string filePath)
         {
-            List<Car> cars = new List<Car>();
-
             if (!File.Exists(filePath))
             {
-                throw new FileNotFoundException($"File not found: {filePath}");
-            }
-
-            long fileLength = new FileInfo(filePath).Length;
-
-            using (FileStream fs = new FileStream(filePath, FileMode.Open, FileAccess.Read))
-            using (BinaryReader reader = new BinaryReader(fs, Encoding.UTF8))
-            {
-                for (long position = 0; position < fileLength;)
+                try
                 {
-                    try
+                    using (FileStream stream = new FileStream(filePath, FileMode.Create))
                     {
-                        string licensePlate = reader.ReadString();
-                        string brand = reader.ReadString();
-                        string name = reader.ReadString();
-                        string color = reader.ReadString();
-                        double price = reader.ReadDouble();
-                        int horsePower = reader.ReadInt32();
-                        double cityConsumption = reader.ReadDouble();
-                        double mixedConsumption = reader.ReadDouble();
-                        double highwayConsumption = reader.ReadDouble();
-
-                        Car car = new Car(licensePlate, brand, name, horsePower, color, price,
-                                        cityConsumption, mixedConsumption, highwayConsumption);
-
-                        cars.Add(car);
-
-                        position = fs.Position;
+                        BinaryFormatter formatter = new BinaryFormatter();
+                        formatter.Serialize(stream, new List<Car>());
                     }
-                    catch (EndOfStreamException)
-                    {
-                        break;
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine($"Error due read: {ex.Message}");
-                        break;
-                    }
+                    Console.WriteLine($"File created: {filePath}");
+                    return new List<Car>();
+                }
+                catch (Exception createEx)
+                {
+                    Console.WriteLine($"Error creating file: {createEx.Message}");
+                    return new List<Car>();
                 }
             }
-
-            return cars;
+            try
+            {
+                BinaryFormatter formatter = new BinaryFormatter();
+                using (FileStream stream = new FileStream(filePath, FileMode.Open))
+                {
+                    return (List<Car>)formatter.Deserialize(stream);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error reading from file: {ex.Message}");
+                return new List<Car>();
+            }
         }
+
         public static void SaveDataToFile(string fileName, List<Car> cars)
         {
             try
@@ -70,7 +55,7 @@ namespace file_manager.FileManager
                 {
                     formatter.Serialize(stream, cars);
                 }
-                Console.WriteLine("Cars saved successfully!");
+                Console.WriteLine("Cars loaded successfully!");
             }
             catch (Exception ex)
             {

@@ -29,36 +29,34 @@ namespace file_manager.Methods
 			}
 			return inputDouble;
 		}
-
-		public static string getValidLicensePlate()
+        public static bool LicensePlateExists(List<Car> cars, string licensePlate)
+        {
+            return cars.Any(car =>
+                string.Equals(car.LicensePlate, licensePlate.ToUpper(), StringComparison.OrdinalIgnoreCase));
+        }
+        public static string getValidLicensePlate(List<Car> cars)
 		{
 			string inputLicense = "";
 			inputLicense = Console.ReadLine();
 			if (!Car.IsValidLicensePlate(inputLicense))
 			{
 				Console.WriteLine("Valid formats: ABC-123 or AA-AA-123");
-				return getValidLicensePlate();
+				return getValidLicensePlate(cars);
 			}
+			else if (LicensePlateExists(cars, inputLicense.ToUpper()))
+			{
+                Console.WriteLine("This license plate is already exist in the list!");
+                return getValidLicensePlate(cars);
+            }
 			return inputLicense;
 		}
-		public static Car inputData()
+		public static Car inputData(List<Car> cars)
 		{
 			Car tempCar = new Car();
 			Console.WriteLine("Creating new Car...");
 
-			/*
-            private string licensePlate;
-            private string brand;
-            private string name;
-            private string color;
-            private double price;
-            private int horsePower;
-            private double[] consumption = new double[3];
-            private bool isEconomy;
-            */
-
 			Console.Write("Input the car's license plate: ");
-			tempCar.LicensePlate = Inputs.getValidLicensePlate();
+			tempCar.LicensePlate = Inputs.getValidLicensePlate(cars);
 
 			Console.Write("Input the car's brand: ");
 			tempCar.Brand = Console.ReadLine();
@@ -75,11 +73,28 @@ namespace file_manager.Methods
 			Console.Write("Input the car's horsepower: ");
 			tempCar.Price = Inputs.getValidInt();
 
-			Console.Write("Inpupt the car's consumption (city, mixed, highway): ");
-			tempCar.SetConsumption(Inputs.getValidDouble(), Inputs.getValidDouble(), Inputs.getValidDouble());
-
+			Console.Write("Inpupt the car's consumption (city, mixed, highway): \n");
+            Console.Write("City: ");
+			double city = Inputs.getValidDouble();
+            Console.Write("Mixed: ");
+			double mixed = Inputs.getValidDouble();
+            Console.WriteLine("Highway: ");
+            double highway = Inputs.getValidDouble();
+            tempCar.SetConsumption(city,mixed,highway);
 			return tempCar;
 		}
+		public static void InputCarToList(List<Car> cars) {
+            Console.Write("How many car do you want to add?: ");
+            int count = getValidInt();
+            for (int i = 0; i < count; i++)
+            {
+                Console.WriteLine($"{i}.:");
+                cars.Add(inputData(cars));
+            }
+            Console.WriteLine("Cars saved sucessfully!\nPress ENTER to continue...");
+			Console.ReadKey();
+            return;
+        }
 
 	}
 }
